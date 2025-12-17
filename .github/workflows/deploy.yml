@@ -19,7 +19,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_KEY }}
         source: "."
-        target: "/post-api"
+        target: "/root/post-api"
         debug: true # Esto te ayudará a ver más info si falla
 
     - name: Run deploy commands on VPS
@@ -29,7 +29,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_KEY }}
         script: |
-          cd /post-api
+          cd /root/post-api
           
           # Manejo de errores más seguro para matar el proceso
           echo "Matar proceso en el puerto 3000..."
