@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Feliz Navidad 2!';
+  getHealth(): any {
+    return {
+      service: 'posts-api service',
+      message: 'Onlineapp.service.ts',
+    };
   }
 }

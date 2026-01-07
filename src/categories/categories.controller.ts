@@ -7,8 +7,8 @@ import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
 import { Pagination } from 'nestjs-typeorm-paginate';
 import { Category } from './category.entity';
-import { SuccessResponseDto } from 'src/common/dto/response.dto';
-import { QueryDto } from 'src/common/dto/query.dto';
+import { SuccessResponseDto } from '../common/dto/response.dto';
+import { QueryDto } from '../common/dto/query.dto';
 
 @Controller('categories')
 export class CategoriesController {
