@@ -30,7 +30,12 @@ export class AuthService {
   async register(createUserDto: CreateUserDto): Promise<string | null> {
     const user = await this.usersService.create(createUserDto);
     if (!user) return null;
-    const payload = { id: user.id, email: user.username, role: user.role };
+    const payload = {
+      id: user.id,
+      email: user.email,
+      username: user.username,
+      role: user.role,
+    };
     return this.jwtService.sign(payload);
   }
 }
