@@ -24,8 +24,8 @@ import { CursosModule } from './cursos/cursos.module';
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: process.env.DB_SYNCHRONIZE === 'true'
-      //synchronize: true,
+      //synchronize: process.env.DB_SYNCHRONIZE === 'true'
+      synchronize: true,
       //ssl: { rejectUnauthorized: false },
     }),
     AuthModule,
